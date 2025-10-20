@@ -203,7 +203,7 @@
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
         }
         
@@ -222,36 +222,6 @@
             width: 100%;
             height: auto;
             display: block;
-        }
-        
-        /* Video Section */
-        .video-section {
-            text-align: center;
-        }
-        
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .video-instructions {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         /* Tokenomics Section */
@@ -497,7 +467,6 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#video">Video</a></li>
                 <li><a href="#tokenomics">Tokenomics</a></li>
                 <li><a href="#community">Community</a></li>
             </ul>
@@ -540,29 +509,14 @@
                 <div class="gallery-item">
                     <img src="https://i.postimg.cc/R383n2kD/IMG-20251020-020702-225.jpg" alt="DogeCoin Movement">
                 </div>
+                <div class="gallery-item">
+                    <!-- Replace "dogecoin-video.mp4" with your actual video filename -->
+                    <video controls poster="https://i.postimg.cc/4Kn7yXS2/IMG-20251020-020702-041.jpg">
+                        <source src="dogecoin-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video" class="video-section">
-        <h2 class="section-title">Featured Video</h2>
-        <div class="video-container">
-            <!-- Replace "dogecoin-video.mp4" with your actual video filename -->
-            <video controls poster="https://i.postimg.cc/4Kn7yXS2/IMG-20251020-020702-041.jpg">
-                <source src="dogecoin-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="video-instructions">
-            <h3>How to Add Your Video</h3>
-            <p>To add your video to the website:</p>
-            <ol style="text-align: left; max-width: 500px; margin: 1rem auto;">
-                <li>Name your MP4 file <strong>dogecoin-video.mp4</strong></li>
-                <li>Place it in the same folder as this HTML file</li>
-                <li>The video will automatically load and display here</li>
-            </ol>
-            <p><em>If your video has a different name, update the "src" attribute in the video tag above.</em></p>
         </div>
     </section>
 
@@ -669,16 +623,14 @@
                     return "You can buy $DTAX on Pump.fun using this link: https://join.pump.fun/HSag/oq24104j";
                 } else if (lowerMessage.includes('game') || lowerMessage.includes('dodge') || lowerMessage.includes('taxman')) {
                     return "We're developing 'Dodge the Taxman' - an interactive game where you can win $DTAX tokens! Stay tuned for updates on our social media channels.";
-                } else if (lowerMessage.includes('gallery') || lowerMessage.includes('images')) {
-                    return "Check out our Gallery section to see community images showcasing the DogeCoin Tax movement!";
-                } else if (lowerMessage.includes('video')) {
-                    return "Watch our featured video to learn more about the DogeCoin Tax movement and our mission to unite against the taxman!";
+                } else if (lowerMessage.includes('gallery') || lowerMessage.includes('images') || lowerMessage.includes('video')) {
+                    return "Check out our Gallery section to see community images and our featured video showcasing the DogeCoin Tax movement!";
                 } else if (lowerMessage.includes('community') || lowerMessage.includes('social') || lowerMessage.includes('telegram') || lowerMessage.includes('twitter')) {
                     return "Join our community on Telegram (https://t.me/DogeTaxonsolana) and Twitter (https://x.com/dogetaxonsol?s=21) to stay updated and connect with other $DTAX holders!";
                 } else if (lowerMessage.includes('what is') || lowerMessage.includes('about') || lowerMessage.includes('dogecoin')) {
                     return "DogeCoin Tax ($DTAX) is more than just a meme - it's a movement uniting the community against the taxman. We're building a strong, diamond-handed community with future utility features and games.";
                 } else {
-                    return "I'm not sure I understand. You can ask me about the $DTAX token, how to buy, our gallery, video, community channels, or the Dodge the Taxman game!";
+                    return "I'm not sure I understand. You can ask me about the $DTAX token, how to buy, our gallery, community channels, or the Dodge the Taxman game!";
                 }
             }
             
@@ -720,4 +672,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
